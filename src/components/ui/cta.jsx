@@ -1,25 +1,23 @@
 import React from "react";
 import { motion } from "framer-motion";
-const Button = ({ children, ...props }) => (
-  <button className="px-4 py-2 rounded bg-blue-600 text-white" {...props}>
-    {children}
-  </button>
-);
-
-
 
 export default function Cta() {
   return (
-    <motion.section
-      initial={{ opacity: 0, y: 20 }}
-      animate={{ opacity: 1, y: 0 }}
-      transition={{ duration: 0.5 }}
-      className="text-center bg-white p-8 rounded-xl shadow-md mt-10"
-    >
-      <h2 className="text-3xl font-bold mb-4">Ready to get started?</h2>
-      <p className="text-gray-600 mb-6">Join us now and explore the experience.</p>
-      <Button>Get Started</Button>
-    </motion.section>
+    <section className="py-20 px-6 md:px-20 bg-gradient-to-r from-blue-500 to-purple-600 text-white">
+      <motion.div
+        initial={{ opacity: 0, scale: 0.95 }}
+        whileInView={{ opacity: 1, scale: 1 }}
+        transition={{ duration: 0.5 }}
+        className="max-w-4xl mx-auto text-center"
+      >
+        <h2 className="text-4xl font-bold mb-4">Ready to Get Started?</h2>
+        <p className="text-lg mb-8">
+          Take your projects to the next level with our easy-to-use platform.
+        </p>
+        <button className="bg-white text-blue-600 font-semibold px-6 py-3 rounded-full shadow-lg hover:bg-blue-100 transition">
+          Join Now
+        </button>
+      </motion.div>
+    </section>
   );
 }
-
